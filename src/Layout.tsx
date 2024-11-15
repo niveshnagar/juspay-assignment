@@ -1,24 +1,32 @@
 import { ReactNode } from "react";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/AppSidebar";
+import AppSidebar from "./components/AppSidebar";
+import Navbar from "./components/Navbar";
+import NotificationSidebar from "./components/NotificationSidebar";
 
-// Define props for the Layout component
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <SidebarProvider>
-      {/* Left Sidebar for App Navigation */}
+    <div className="flex w-screen h-screen">
+      {/* Left Sidebar */}
       <AppSidebar />
 
-      {/* Main Content Area */}
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
+      {/* Center Area */}
+      <div className="flex-1 flex flex-col">
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Main Content */}
+        <main className="flex-1 overflow-y-auto p-4 bg-white">
+          {children}
+        </main>
+      </div>
+
+      {/* Right Sidebar */}
+      <NotificationSidebar />
+    </div>
   );
 };
 

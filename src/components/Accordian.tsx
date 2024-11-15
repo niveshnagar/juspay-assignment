@@ -60,5 +60,5 @@ export const Accordion: React.FC<{
   children: React.ReactNode;
   className?: string;
 }> = ({ children, className }) => {
-  return <div className={`gap-4 ${className}`}>{children}</div>;
+  return <div className={`${className}`}>{children}</div>;
 };
