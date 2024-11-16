@@ -61,6 +61,7 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         "white-40": "#FFFFFF66",
+        customBlue: "#E3F5FF",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

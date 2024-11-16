@@ -1,4 +1,4 @@
-import { Star, Slash, History, Bell, Search } from "lucide-react";
+import { Star, Slash, History, Bell } from "lucide-react";
 import {
   Breadcrumb,
   BreadcrumbItem,
