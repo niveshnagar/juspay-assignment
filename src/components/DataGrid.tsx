@@ -1,4 +1,5 @@
 import CardItem from "./Card";
+import LineGraph from "./LineGraph";
 import StackedBarChart from "./StackedBarChart";
 
 const DataGrid = () => {
@@ -50,7 +51,38 @@ const DataGrid = () => {
 
       {/* Row 2 */}
       <div className="flex flex-row gap-7 w-full h-[318px]">
-        <div className="bg-slate-400 w-[662px] h-full"></div>
+        <div className=" w-[662px] h-full bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4">
+          <div className="flex flex-row gap-4">
+            <p className="font-semibold text-sm">Revenue</p>
+            <p className="text-white text-opacity-20">|</p>
+            <div className="py-0.5 pr-2 pl-1 flex flex-row items-center">
+              <div className="text-[#C6C7F8] w-4 h-4 flex justify-center items-center">
+                &#x2022;
+              </div>
+              <div className="text-xs leading-[18px] flex items-center mr-1">
+                Current Week
+              </div>
+              <div className="text-xs leading-[18px] flex items-center font-semibold">
+                $58,211
+              </div>
+            </div>
+            <div className="py-0.5 pr-2 pl-1 flex flex-row items-center">
+              <div className="text-[#A8C5DA] w-4 h-4 flex justify-center items-center">
+                &#x2022;
+              </div>
+              <div className="text-xs leading-[18px] flex items-center mr-1">
+                Previous Week
+              </div>
+              <div className="text-xs leading-[18px] flex items-center font-semibold">
+                $68,768
+              </div>
+            </div>
+          </div>
+          {/* Line Graph */}
+          <div className="flex-1 flex justify-center w-full">
+            <LineGraph/>
+          </div>
+        </div>
         <div className="bg-amber-700 flex-1 h-full"></div>
       </div>
 
