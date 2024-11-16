@@ -8,7 +8,7 @@ import { notificationSidebarAtom } from "@/atoms/notificationSidebar.atom";
 const notifications = [
   {
     icon: Bug,
-    title: "You have a bug that needs fixing",
+    title: "You have a bug that need...",
     time: "Just now",
   },
   {
@@ -18,12 +18,12 @@ const notifications = [
   },
   {
     icon: Bug,
-    title: "You have a bug that needs fixing",
+    title: "You have a bug that need...",
     time: "12 hours ago",
   },
   {
     icon: Radio,
-    title: "Andi Lane subscribed to you",
+    title: "Andi Lane subscribed to y...",
     time: "Today, 11:59 AM",
   },
 ];
@@ -32,7 +32,7 @@ const NotificationSidebar = () => {
   const isOpen = useRecoilValue(notificationSidebarAtom);
 
   return isOpen ? (
-    <div className="p-4 flex flex-col gap-6 bg-white bg-opacity-10 w-[280px] h-screen">
+    <div className="p-4 flex flex-col gap-6 bg-white bg-opacity-10 w-[280px] h-screen border-l border-white-10">
       {/* Notification */}
       <div className="flex flex-col gap-2">
         <div className="px-1 py-2 leading-5">Notifications</div>

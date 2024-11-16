@@ -90,7 +90,7 @@ const AppSidebar = () => {
   const isOpen = useRecoilValue(appSidebarAtom);
 
   return isOpen ? (
-    <div className=" px-4  py-5 flex flex-col gap-4 bg-white bg-opacity-10  overflow-auto scrollbar-none w-[212px] h-screen leading-5">
+    <div className=" px-4  py-5 flex flex-col gap-4 bg-white bg-opacity-10 overflow-auto scrollbar-none w-[212px] h-screen leading-5 border-r border-white-10">
       {/* Sidebar Header */}
       <div>
         <div className="p-1 flex flex-row items-center">

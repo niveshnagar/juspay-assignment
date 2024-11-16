@@ -22,7 +22,7 @@ const SidebarToggle: React.FC<SidebarToggleProps> = ({ sidebarType }) => {
 
   return (
     <div>
-      <PanelLeft className="h-7 w-7 p-1" onClick={toggleSidebar} />
+      <PanelLeft className="h-7 w-7 p-1 cursor-pointer" onClick={toggleSidebar} />
     </div>
   );
 };

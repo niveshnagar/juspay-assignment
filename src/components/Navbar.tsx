@@ -12,7 +12,7 @@ import ThemeToggle from "./ThemeToggle";
 import SearchBar from "./SearchBar";
 const Navbar = () => {
   return (
-    <div className=" flex flex-row justify-between w-full h-[68px] px-7 py-5 bg-white bg-opacity-10 ">
+    <div className=" flex flex-row justify-between w-full h-[68px] px-7 py-5 bg-white bg-opacity-10 border-b border-white-10">
       <div className="flex flex-rows gap-2 items-center">
         <SidebarToggle sidebarType={"app"} />
         <Star className="h-7 w-7 p-1" />
