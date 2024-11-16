@@ -1,5 +1,6 @@
 import CardItem from "./Card";
 import LineGraph from "./LineGraph";
+import ProgressBars from "./ProgressBars";
 import StackedBarChart from "./StackedBarChart";
 
 const DataGrid = () => {
@@ -51,7 +52,7 @@ const DataGrid = () => {
 
       {/* Row 2 */}
       <div className="flex flex-row gap-7 w-full h-[318px]">
-        <div className=" w-[662px] h-full bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4">
+        <div className="w-[662px] h-full bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4">
           <div className="flex flex-row gap-4">
             <p className="font-semibold text-sm">Revenue</p>
             <p className="text-white text-opacity-20">|</p>
@@ -80,10 +81,16 @@ const DataGrid = () => {
           </div>
           {/* Line Graph */}
           <div className="flex-1 flex justify-center w-full">
-            <LineGraph/>
+            <LineGraph />
           </div>
         </div>
-        <div className="bg-amber-700 flex-1 h-full"></div>
+        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4">
+          <p className="font-semibold text-sm">Revenue by Location</p>
+          {/* Map */}
+          <div className="flex-1 bg-pink-300 rounded-lg"></div>
+          {/* Stats */}
+          <ProgressBars />
+        </div>
       </div>
 
       {/* Row 3 */}
