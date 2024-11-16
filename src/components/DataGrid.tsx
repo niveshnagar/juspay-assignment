@@ -1,4 +1,5 @@
 import CardItem from "./Card";
+import StackedBarChart from "./StackedBarChart";
 
 const DataGrid = () => {
   return (
@@ -39,7 +40,12 @@ const DataGrid = () => {
             variant="up" // Set the variant to "up" for the TrendingUp icon
           />
         </div>
-        <div className="bg-emerald-500 flex-1 h-full"></div>
+        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4 ">
+          <p className="font-semibold text-sm">Projections vs Actuals</p>
+          <div className="flex-1 flex justify-center w-full">
+            <StackedBarChart />
+          </div>
+        </div>
       </div>
 
       {/* Row 2 */}
