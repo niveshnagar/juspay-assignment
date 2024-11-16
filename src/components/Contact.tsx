@@ -19,7 +19,7 @@ const Contact: React.FC<ContactProps> = ({
         <AvatarImage src={avatar} />
         <AvatarFallback>{fallback}</AvatarFallback>
       </Avatar>
-      <p className="text-sm font-medium">{name}</p>
+      <p className="text-sm">{name}</p>
     </div>
   );
 };

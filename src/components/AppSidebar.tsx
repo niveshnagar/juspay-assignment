@@ -90,7 +90,7 @@ const AppSidebar = () => {
   const isOpen = useRecoilValue(appSidebarAtom);
 
   return isOpen ? (
-    <div className=" px-4  py-5 flex flex-col gap-4 bg-white bg-opacity-10 overflow-auto scrollbar-none w-[212px] h-screen leading-5 border-r border-white-10">
+    <div className=" px-4 py-5 flex flex-col gap-4 bg-white bg-opacity-10 overflow-auto scrollbar-none w-[212px] h-screen leading-5 border-r border-white-10">
       {/* Sidebar Header */}
       <div>
         <div className="p-1 flex flex-row items-center">
@@ -98,7 +98,7 @@ const AppSidebar = () => {
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <p className="ml-2">User</p>
+          <p className="ml-2">Elfo</p>
         </div>
       </div>
       <div>
@@ -136,7 +136,7 @@ const AppSidebar = () => {
                 className={`flex items-center pl-0 pr-2 py-1 gap-1 rounded-lg transition-colors relative ${
                   activeItem === item.title
                     ? "bg-white bg-opacity-10 text-white"
-                    : "text-white hover:bg-gray-800"
+                    : "text-white "
                 }`}
               >
                 <div

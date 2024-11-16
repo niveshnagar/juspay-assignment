@@ -1,12 +1,13 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import ThemeToggle from "./components/ThemeToggle";
+import DataGrid from "./components/DataGrid";
 
-const Hello = () => {
+const MainFrame = () => {
   return (
-    <>
-      <ThemeToggle />
-    </>
+    <div className="">
+      <div className="py-1 px-2 font-semibold">eCommerce</div>
+      <DataGrid />
+    </div>
   );
 };
 
@@ -14,7 +15,7 @@ const App = () => {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<MainFrame />} />
       </Routes>
     </Layout>
   );

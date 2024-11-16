@@ -17,7 +17,7 @@ const Activity: React.FC<ActivityProps> = ({ avatar, fallback, description, time
         <AvatarFallback>{fallback}</AvatarFallback>
       </Avatar>
       <div>
-        <div className="leading-5">{description}</div>
+        <div className="text-sm">{description}</div>
         <div className="text-white-40 text-xs leading-[18px]">{time}</div>
       </div>
     </div>
