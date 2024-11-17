@@ -29,21 +29,20 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
       >
         {/* Chevron icon */}
         {isOpen ? (
-          <ChevronDown className="w-4 h-4 ml-1 text-white text-opacity-20 transition-transform duration-200" />
+          <ChevronDown className="text-[#1C1C1C33] dark:text-white dark:text-opacity-20 w-4 h-4 ml-1 transition-transform duration-200" />
         ) : (
-          <ChevronRight className="w-4 h-4 ml-1 text-white text-opacity-20 transition-transform duration-200" />
+          <ChevronRight className="text-[#1C1C1C33] dark:text-white dark:text-opacity-20 w-4 h-4 ml-1 transition-transform duration-200" />
         )}
         {/* Icon passed as prop */}
-        <Icon className="w-5 h-5 text-white" />
+        <Icon className=" text-[#1C1C1C] dark:text-white  w-5 h-5 " />
 
         {/* Title */}
-        <span className="text-white">{title}</span>
+        <span className="text-[#1C1C1C] dark:text-white">{title}</span>
       </div>
 
       {/* Content shown when the item is open */}
-      {/* Content shown when the item is open */}
       {isOpen && (
-        <div className="pl-12 text-white gap-1">
+        <div className="text-[#1C1C1C] dark:text-white pl-12 gap-1">
           {Array.isArray(options)
             ? options.map((option, index) => (
                 <p key={index} className="py-1">{option}</p>

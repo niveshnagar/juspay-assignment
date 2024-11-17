@@ -62,7 +62,7 @@ export default {
         },
         "white-40": "#FFFFFF66",
         customBlue: "#E3F5FF",
-        'white-10': 'rgba(255, 255, 255, 0.1)', // 
+        "white-10": "rgba(255, 255, 255, 0.1)", //
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

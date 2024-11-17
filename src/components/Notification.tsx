@@ -18,7 +18,7 @@ const Notification: React.FC<NotificationProps> = ({ icon: Icon, title, time }) 
         {/* Notification title */}
         <div className="leading-5">{title}</div>
         {/* Notification time */}
-        <div className="text-white-40 text-xs leading-[18px]">{time}</div>
+        <div className="text-[#1C1C1C66] dark:text-[#FFFFFF66] text-xs leading-[18px]">{time}</div>
       </div>
     </div>
   );

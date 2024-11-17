@@ -107,7 +107,7 @@ const NotificationSidebar = () => {
   const isOpen = useRecoilValue(notificationSidebarAtom);
 
   return isOpen ? (
-    <div className="p-4 flex flex-col gap-6 bg-white bg-opacity-10 w-[280px] overflow-auto scrollbar-none border-l border-white-10">
+    <div className="bg-white border-[#1C1C1C1A] dark:bg-[#1C1C1C]  dark:border-white-10 text-[#1C1C1C] dark:text-white  p-4 flex flex-col gap-6  w-[280px] overflow-auto scrollbar-none border-l ">
       {/* Notifications */}
       <div className="flex flex-col gap-2">
         <div className="px-1 py-2 leading-5 font-semibold">Notifications</div>
@@ -137,7 +137,7 @@ const NotificationSidebar = () => {
             {/* Add the rotated divider except after the last activity */}
             {index < activities.length - 1 && (
               <div className="relative w-full h-0 flex justify-start mx-2 mb-1.5 m">
-                <div className="w-4 h-0.5 bg-white bg-opacity-20 transform rotate-90 rounded-lg"></div>
+                <div className="bg-[#1C1C1C1A] dark:bg-[#FFFFFF1A]  w-4 h-0.5 transform rotate-90 rounded-lg"></div>
               </div>
             )}
           </div>

@@ -1,4 +1,6 @@
 import React from "react";
+import { themeAtom } from "@/atoms/theme.atom";
+import { useRecoilValue } from "recoil";
 
 type CardData = {
   label: string;
@@ -26,6 +28,11 @@ const Card: React.FC<CardData> = ({ label, amount, dotColor }) => {
 
 // Main Component with Mock Data
 const CardList: React.FC = () => {
+  const theme = useRecoilValue(themeAtom);
+
+  const lightArray = ["#1C1C1C", "#BAEDBD", "#95A4FC", "#B1E3FF"];
+  const darkArray = ["#C6C7F8", "#BAEDBD", "#95A4FC", "#B1E3FF"];
+
   const mockData = [
     { label: "Direct", amount: "$300.56", dotColor: "#C6C7F8" },
     { label: "Referral", amount: "$180.24", dotColor: "#BAEDBD" },
@@ -40,7 +47,7 @@ const CardList: React.FC = () => {
           key={index}
           label={item.label}
           amount={item.amount}
-          dotColor={item.dotColor}
+          dotColor={theme === "light" ? lightArray[index] : darkArray[index]}
         />
       ))}
     </div>

@@ -107,11 +107,11 @@ const columns: ColumnDef<Order>[] = [
     cell: ({ row }) => {
       const status = row.original.status;
       const statusColors: Record<string, string> = {
-        Pending: "text-[#59A8D4]",
-        Complete: "text-[#4AA785]",
-        Approved: "text-[#FFC555]",
-        Rejected: "text-white-40",
-        "In Progress": "text-[#95A4FC]",
+        Pending: "text-[#59A8D4] dark:text-[#59A8D4]",
+        Complete: "text-[#4AA785] dark:text-[#4AA785]",
+        Approved: "text-[#FFC555] dark:text-[#FFC555]",
+        Rejected: "text-[#1C1C1C66] dark:text-[#FFFFFF66]",
+        "In Progress": "text-[#8A8CD9] dark:text-[#95A4FC]",
       };
 
       return (
@@ -155,9 +155,12 @@ export default function OrderList() {
   const pageCount = Math.ceil(initialData.length / pagination.pageSize);
 
   return (
-    <div className="flex flex-col gap-3 overflow-auto scrollbar-none">
+    <div className="text-[#1C1C1C] dark:text-white  flex flex-col gap-3 w-full overflow-auto scrollbar-none">
+      <div className="text-[#1C1C1C] dark:text-white py-1 px-2 font-semibold w-full">
+        Order List
+      </div>
       {/* Top Bar */}
-      <div className="flex justify-between items-center p-2 gap-4 h-[44px] bg-white bg-opacity-5 rounded-lg">
+      <div className=" bg-[#F7F9FB] dark:bg-[#FFFFFF0D] flex justify-between items-center p-2 gap-4 h-[44px] w-full rounded-lg">
         <div className="flex gap-2 items-center">
           <Button variant="ghost" size="icon">
             <Plus size={16} />
@@ -187,7 +190,7 @@ export default function OrderList() {
           placeholder="Search"
           value={globalFilter}
           onChange={(e) => setGlobalFilter(e.target.value)}
-          className="max-w-[160px] border border-[#1C1C1C] border-opacity-40 rounded-lg placeholder:text-white-40"
+          className="placeholder:text-[#1C1C1C33] border-[#1C1C1C1A] dark:border-[#FFFFFF1A] dark:placeholder:text-[#FFFFFF33] max-w-[160px] h-7 border border-opacity-40 rounded-lg "
         />
       </div>
 
@@ -198,8 +201,8 @@ export default function OrderList() {
       />
 
       {/* ShadCN Pagination Controls */}
-      <div className="flex justify-end">
-        <div className="py-2 px-4 border-t">
+      <div className="flex justify-end w-full">
+        <div className="">
           <Pagination>
             <PaginationContent>
               <PaginationItem>

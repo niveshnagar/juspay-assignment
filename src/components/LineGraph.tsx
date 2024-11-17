@@ -1,3 +1,6 @@
+import { themeAtom } from "@/atoms/theme.atom";
+
+import { useRecoilValue } from "recoil";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -20,6 +23,8 @@ ChartJS.register(
 );
 
 const LineGraph = () => {
+  const theme = useRecoilValue(themeAtom);
+
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"], // X-axis labels
     datasets: [
@@ -36,7 +41,7 @@ const LineGraph = () => {
       {
         label: "Dataset 2",
         data: [15, 10, 12, 16, 21, 23], // Data points for the second line
-        borderColor: "#C6C7F8", // Line color (purple)
+        borderColor: theme === "light" ? "#1C1C1C" : "#C6C7F8", // Line color (purple)
         backgroundColor: "rgba(239, 68, 68, 0.2)", // Background fill (optional)
         fill: false, // Whether the area under the line is filled
         tension: 0.3, // Smoothness of the line
@@ -67,7 +72,7 @@ const LineGraph = () => {
         },
         grid: {
           drawBorder: false, // Hides the axis line
-          color: "#FFFFFF0D",
+          color: theme === "light" ? "#1C1C1C0D" : "#FFFFFF1A",
           lineWidth: 2,
           borderDash: [10, 5], // Creates a dashed effect
           borderDashOffset: 0, // Start position of dashes

@@ -1,4 +1,5 @@
 import { Bar } from "react-chartjs-2";
+import { themeAtom } from "@/atoms/theme.atom";
 
 import {
   Chart as ChartJS,
@@ -8,21 +9,24 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { useRecoilValue } from "recoil";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const StackedBarChart = () => {
+  const theme = useRecoilValue(themeAtom);
+
   const data = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
       {
-        label: "cyan",
+        label: "Projections",
         data: [17, 21, 18, 22, 16, 21],
         backgroundColor: "#A8C5DA",
         barThickness: "25",
       },
       {
-        label: "light",
+        label: "Actual",
         data: [22, 26, 23, 29, 19, 26],
         backgroundColor: "#A8C5DA80",
         borderRadius: "4",
@@ -45,7 +49,7 @@ const StackedBarChart = () => {
         },
         grid: {
           drawBorder: false, // Hides the axis line
-          color: "#FFFFFF0D",
+          color: theme === "light" ? "#1C1C1C0D" : "#FFFFFF1A",
           lineWidth: 2,
           borderDash: [10, 5], // Creates a dashed effect
           borderDashOffset: 0, // Start position of dashes
