@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import DataGrid from "./components/DataGrid";
+import OrderList from "./components/OrderList";
 
 const MainFrame = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
     <Layout>
       <Routes>
         <Route path="/" element={<MainFrame />} />
+        <Route path="/orderlist" element={<OrderList />} />
       </Routes>
     </Layout>
   );
