@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Navbar />
 
         {/* Main Content */}
-        <main className="flex-1 overflow-y-auto bg-white-10 p-7 overflow-auto scrollbar-none">
+        <main className="bg-white  dark:bg-[#1C1C1C] flex-1 overflow-y-auto p-7 overflow-auto scrollbar-none">
           {children}
         </main>
       </div>

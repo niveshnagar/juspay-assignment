@@ -5,7 +5,7 @@ import OrderList from "./components/OrderList";
 
 const MainFrame = () => {
   return (
-    <div className="">
+    <div className="bg-white  dark:bg-[#1C1C1C]">
       <div className="text-[#1C1C1C] dark:text-white  py-1 px-2 font-semibold">eCommerce</div>
       <DataGrid />
     </div>
