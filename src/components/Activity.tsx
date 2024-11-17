@@ -18,7 +18,7 @@ const Activity: React.FC<ActivityProps> = ({ avatar, fallback, description, time
       </Avatar>
       <div>
         <div className="text-sm">{description}</div>
-        <div className="text-white-40 text-xs leading-[18px]">{time}</div>
+        <div className="text-[#1C1C1C66] dark:text-[#FFFFFF66] text-xs leading-[18px]">{time}</div>
       </div>
     </div>
   );

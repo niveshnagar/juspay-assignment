@@ -13,7 +13,7 @@ const DataTable = () => {
     <div className="overflow-x-auto">
       <Table>
         <TableHeader>
-          <TableRow className="text-xs leading-[18px] text-white-40 py-2 border-b border-white/20">
+          <TableRow className="text-[#1C1C1C66] dark:text-[#FFFFFF66] border-[#1C1C1C33] dark:border-[#FFFFFF33]  text-xs leading-[18px] py-2 border-b">
             <TableCell className="pl-0 ml-0">Name</TableCell>
             <TableCell className="py-2 px-3">Price</TableCell>
             <TableCell className="py-2 px-3">Quantity</TableCell>
@@ -22,7 +22,7 @@ const DataTable = () => {
         </TableHeader>
         <TableBody>
           {data.map((item, index) => (
-            <TableRow key={index} className="py-2 text-xs leading-[18px]">
+            <TableRow key={index} className="text-[#1C1C1C] dark:text-white  py-2 text-xs leading-[18px]">
               <TableCell className="pl-0 ml-0">{item.name}</TableCell>
               <TableCell>${item.price}</TableCell>
               <TableCell>{item.quantity}</TableCell>

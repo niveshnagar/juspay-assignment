@@ -12,41 +12,43 @@ const DataGrid = () => {
     <div className="mt-4 flex flex-col gap-7 w-full">
       {/* Row 1 */}
       <div className="flex flex-row gap-7 w-full h-[252px]">
+        {/* Row 1 Cell 1 */}
         <div className=" flex-1 grid grid-rows-2 grid-cols-2 gap-7">
           <CardItem
             title="Customers"
-            bgColorClass="bg-customBlue"
-            textColorClass="text-[#1C1C1C]"
+            bgColorClass="bg-[#E3F5FF]  dark:bg-[#E3F5FF]"
+            textColorClass="text-[#1C1C1C] dark:text-[#1C1C1C]"
             count={"3,781"}
             percentageChange="+11.01%"
             variant="up" // Set the variant to "up" for the TrendingUp icon
           />
           <CardItem
             title="Orders"
-            bgColorClass="bg-white bg-opacity-5"
-            textColorClass="text-white"
+            bgColorClass="bg-[#F7F9FB] dark:bg-[#FFFFFF0D]"
+            textColorClass="text-[#1C1C1C] dark:text-white"
             count={"1,219"}
             percentageChange="-0.03%"
             variant="down" // Set the variant to "up" for the TrendingUp icon
           />
           <CardItem
             title="Revenue"
-            bgColorClass="bg-white bg-opacity-5"
-            textColorClass="text-white"
+            bgColorClass="bg-[#F7F9FB] dark:bg-[#FFFFFF0D]"
+            textColorClass="text-[#1C1C1C] dark:text-white"
             count={"$695"}
             percentageChange="+15.03%"
             variant="up" // Set the variant to "up" for the TrendingUp icon
           />
           <CardItem
             title="Growth"
-            bgColorClass="bg-[#E5ECF6]"
-            textColorClass="text-[#1C1C1C]"
+            bgColorClass="bg-[#E5ECF6] dark:bg-[#E5ECF6]"
+            textColorClass="text-[#1C1C1C] dark:text-[#1C1C1C]"
             count={"30.1%"}
             percentageChange="+6.08%"
             variant="up" // Set the variant to "up" for the TrendingUp icon
           />
         </div>
-        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4 ">
+        {/* Row 1 Cell 2 */}
+        <div className="bg-[#F7F9FB] dark:bg-[#FFFFFF0D]  flex-1 rounded-2xl p-6 flex flex-col gap-4 ">
           <p className="font-semibold text-sm">Projections vs Actuals</p>
           <div className="flex-1 flex justify-center w-full">
             <StackedBarChart />
@@ -56,23 +58,26 @@ const DataGrid = () => {
 
       {/* Row 2 */}
       <div className="flex flex-row gap-7 w-full h-[318px]">
-        <div className="w-[662px] h-full bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4">
+        {/* Row 2 Cell 1 */}
+        <div className="bg-[#F7F9FB] dark:bg-[#FFFFFF0D] w-[662px] h-full rounded-2xl p-6 flex flex-col gap-4">
           <div className="flex flex-row gap-4">
-            <p className="font-semibold text-sm">Revenue</p>
-            <p className="text-white text-opacity-20">|</p>
-            <div className="py-0.5 pr-2 pl-1 flex flex-row items-center">
-              <div className="text-[#C6C7F8] w-4 h-4 flex justify-center items-center">
+            <p className=" text-[#1C1C1C] dark:text-white  font-semibold text-sm">
+              Revenue
+            </p>
+            <p className="text-[#1C1C1C33] dark:text-[#FFFFFF33]">|</p>
+            <div className="text-[#1C1C1C] dark:text-white   py-0.5 pr-2 pl-1 flex flex-row items-center">
+              <div className="text-[#1C1C1C] dark:text-[#C6C7F8] w-4 h-4 flex justify-center items-center">
                 &#x2022;
               </div>
-              <div className="text-xs leading-[18px] flex items-center mr-1">
+              <div className=" text-xs leading-[18px] flex items-center mr-1">
                 Current Week
               </div>
-              <div className="text-xs leading-[18px] flex items-center font-semibold">
+              <div className=" text-xs leading-[18px] flex items-center font-semibold">
                 $58,211
               </div>
             </div>
-            <div className="py-0.5 pr-2 pl-1 flex flex-row items-center">
-              <div className="text-[#A8C5DA] w-4 h-4 flex justify-center items-center">
+            <div className="text-[#1C1C1C] dark:text-white   py-0.5 pr-2 pl-1 flex flex-row items-center">
+              <div className=" text-[#A8C5DA] dark:text-[#A8C5DA] w-4 h-4 flex justify-center items-center">
                 &#x2022;
               </div>
               <div className="text-xs leading-[18px] flex items-center mr-1">
@@ -88,7 +93,8 @@ const DataGrid = () => {
             <LineGraph />
           </div>
         </div>
-        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4">
+        {/* Row 2 Cell 2 */}
+        <div className="bg-[#F7F9FB] dark:bg-[#FFFFFF0D] text-[#1C1C1C] dark:text-white flex-1 rounded-2xl p-6 flex flex-col gap-4">
           <p className="font-semibold text-sm">Revenue by Location</p>
           {/* Map */}
           <div className="flex-1  rounded-lg flex justify-center w-full">
@@ -105,15 +111,15 @@ const DataGrid = () => {
 
       {/* Row 3 */}
       <div className="flex flex-row gap-7 w-full h-[344px]">
-        {/* Table */}
-        <div className="w-[662px] h-full bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-1">
-          <p className="font-semibold text-sm">Top Selling Products</p>
+        {/* Row 3 Cell 1 */}
+        <div className="bg-[#F7F9FB] dark:bg-[#FFFFFF0D] w-[662px] h-full rounded-2xl p-6 flex flex-col gap-1">
+          <p className="text-[#1C1C1C] dark:text-white font-semibold text-sm">Top Selling Products</p>
           <DataTable />
         </div>
 
         {/* Doughnut chart */}
-        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6">
-          <div className="flex flex-col gap-4 items-center h-full max-w-full">
+        <div className="bg-[#F7F9FB] dark:bg-[#FFFFFF0D]  flex-1 rounded-2xl p-6">
+          <div className="text-[#1C1C1C] dark:text-white flex flex-col gap-4 items-center h-full max-w-full">
             <p className="font-semibold text-sm w-full text-left">
               Total Sales
             </p>

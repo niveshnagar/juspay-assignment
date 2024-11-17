@@ -17,9 +17,9 @@ const ProgressBars = () => {
           </div>
 
           {/* Progress Bar */}
-          <div className="w-full h-0.5 bg-white-40 rounded-full">
+          <div className="bg-[#FFFFFF66] dark:bg-[#1C1C1C66] w-full h-0.5 rounded-full">
             <div
-              className="h-full bg-[#A8C5DA] rounded-full"
+              className=" bg-[#A8C5DA] dark:bg-[#A8C5DA] h-full rounded-full"
               style={{ width: `${item.progress}%` }} // Dynamic width based on progress
             ></div>
           </div>

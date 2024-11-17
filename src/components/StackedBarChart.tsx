@@ -16,13 +16,13 @@ const StackedBarChart = () => {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
       {
-        label: "cyan",
+        label: "Projections",
         data: [17, 21, 18, 22, 16, 21],
         backgroundColor: "#A8C5DA",
         barThickness: "25",
       },
       {
-        label: "light",
+        label: "Actual",
         data: [22, 26, 23, 29, 19, 26],
         backgroundColor: "#A8C5DA80",
         borderRadius: "4",

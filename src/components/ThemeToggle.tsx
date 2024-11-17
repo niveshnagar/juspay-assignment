@@ -16,7 +16,7 @@ const ThemeToggle: React.FC = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
-  return <Sun onClick={toggleTheme} className="h-7 w-7 p-1" />;
+  return <Sun onClick={toggleTheme} className="text-[#1C1C1C] dark:text-white  h-7 w-7 p-1" />;
 };
 
 export default ThemeToggle;

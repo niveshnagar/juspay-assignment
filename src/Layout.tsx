@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex w-screen h-screen">
+    <div className="flex w-screen h-screen bg-white dark:bg-black">
       {/* Left Sidebar */}
       <AppSidebar />
 
