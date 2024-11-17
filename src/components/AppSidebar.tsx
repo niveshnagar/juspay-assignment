@@ -107,13 +107,13 @@ const AppSidebar = () => {
         <div>
           <div className="flex flex-row gap-2">
             <Button
-              className="text-[#1C1C1C66]  dark:text-white-40"
+              className="text-[#1C1C1C66]  dark:text-white-40 px-2 py-1"
               variant="ghost"
             >
               Favorites
             </Button>
             <Button
-              className=" text-[#1C1C1C33] dark:text-white dark:text-opacity-20"
+              className=" text-[#1C1C1C33] dark:text-white dark:text-opacity-20 px-2 py-1"
               variant="ghost"
             >
               Recently
