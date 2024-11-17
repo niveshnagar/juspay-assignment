@@ -1,4 +1,5 @@
 import CardItem from "./Card";
+import CardList from "./CardData";
 import DataTable from "./Datatable";
 import LineGraph from "./LineGraph";
 import ProgressBars from "./ProgressBars";
@@ -100,7 +101,13 @@ const DataGrid = () => {
           <p className="font-semibold text-sm">Top Selling Products</p>
           <DataTable />
         </div>
-        <div className="bg-emerald-500 flex-1 h-full"></div>
+        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4 items-center">
+          <p className="font-semibold text-sm w-full text-left">Total Sales</p>
+          {/* Pie chart */}
+          <div className="flex-1 bg-pink-300 rounded-lg w-full"></div>
+          {/* Cards */}
+          <CardList/>
+        </div>
       </div>
     </div>
   );
