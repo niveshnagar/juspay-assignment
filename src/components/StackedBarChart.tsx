@@ -49,7 +49,7 @@ const StackedBarChart = () => {
         },
         grid: {
           drawBorder: false, // Hides the axis line
-          color:theme==="light"?"#1C1C1C0D": "#FFFFFF1A",
+          color: theme === "light" ? "#1C1C1C0D" : "#FFFFFF1A",
           lineWidth: 2,
           borderDash: [10, 5], // Creates a dashed effect
           borderDashOffset: 0, // Start position of dashes
