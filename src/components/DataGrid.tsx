@@ -1,9 +1,11 @@
 import CardItem from "./Card";
 import CardList from "./CardData";
 import DataTable from "./Datatable";
+import DonutChart from "./DonutChart";
 import LineGraph from "./LineGraph";
 import ProgressBars from "./ProgressBars";
 import StackedBarChart from "./StackedBarChart";
+import WorldMap from "../../assets/World-Map.png";
 
 const DataGrid = () => {
   return (
@@ -89,7 +91,13 @@ const DataGrid = () => {
         <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4">
           <p className="font-semibold text-sm">Revenue by Location</p>
           {/* Map */}
-          <div className="flex-1 bg-pink-300 rounded-lg"></div>
+          <div className="flex-1  rounded-lg flex justify-center w-full">
+            <img
+              src={WorldMap}
+              className="h-[90px] w-[200px] object-cover object-left-bottom"
+              alt="World Map"
+            />
+          </div>
           {/* Stats */}
           <ProgressBars />
         </div>
@@ -97,16 +105,26 @@ const DataGrid = () => {
 
       {/* Row 3 */}
       <div className="flex flex-row gap-7 w-full h-[344px]">
+        {/* Table */}
         <div className="w-[662px] h-full bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-1">
           <p className="font-semibold text-sm">Top Selling Products</p>
           <DataTable />
         </div>
-        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-4 items-center">
-          <p className="font-semibold text-sm w-full text-left">Total Sales</p>
-          {/* Pie chart */}
-          <div className="flex-1 bg-pink-300 rounded-lg w-full"></div>
-          {/* Cards */}
-          <CardList/>
+
+        {/* Doughnut chart */}
+        <div className="flex-1 bg-white bg-opacity-5 rounded-2xl p-6">
+          <div className="flex flex-col gap-4 items-center h-full max-w-full">
+            <p className="font-semibold text-sm w-full text-left">
+              Total Sales
+            </p>
+            {/* Chart */}
+            <div className="flex-1 w-[150px]">
+              <DonutChart />
+            </div>
+
+            {/* Cards */}
+            <CardList />
+          </div>
         </div>
       </div>
     </div>
