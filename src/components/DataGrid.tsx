@@ -1,4 +1,5 @@
 import CardItem from "./Card";
+import DataTable from "./Datatable";
 import LineGraph from "./LineGraph";
 import ProgressBars from "./ProgressBars";
 import StackedBarChart from "./StackedBarChart";
@@ -95,7 +96,10 @@ const DataGrid = () => {
 
       {/* Row 3 */}
       <div className="flex flex-row gap-7 w-full h-[344px]">
-        <div className="bg-red-400 w-[662px] h-full"></div>
+        <div className="w-[662px] h-full bg-white bg-opacity-5 rounded-2xl p-6 flex flex-col gap-1">
+          <p className="font-semibold text-sm">Top Selling Products</p>
+          <DataTable />
+        </div>
         <div className="bg-emerald-500 flex-1 h-full"></div>
       </div>
     </div>
