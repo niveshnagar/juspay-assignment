@@ -107,7 +107,7 @@ const NotificationSidebar = () => {
   const isOpen = useRecoilValue(notificationSidebarAtom);
 
   return isOpen ? (
-    <div className="bg-white border-[#1C1C1C1A] dark:bg-[#1C1C1C]  dark:border-white-10 text-[#1C1C1C] dark:text-white  p-4 flex flex-col flex-shrink-0 gap-6  w-[280px] overflow-auto scrollbar-none border-l ">
+    <div className="bg-white border-[#1C1C1C1A] dark:bg-[#1C1C1C]  dark:border-white-10 text-[#1C1C1C] dark:text-white  p-4 flex flex-col gap-6  w-[280px] overflow-auto scrollbar-none border-l ">
       {/* Notifications */}
       <div className="flex flex-col gap-2">
         <div className="px-1 py-2 leading-5 font-semibold">Notifications</div>

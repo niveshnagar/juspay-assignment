@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps) => {
         <Navbar />
 
         {/* Main Content */}
-        <main className="bg-white dark:bg-[#1C1C1C] flex-1 p-7 overflow-x-auto overflow-y-hidden max-w-full min-w-0 sm-700:overflow-x-auto">
+        <main className="bg-white  dark:bg-[#1C1C1C] flex-1 overflow-y-auto p-7 overflow-auto scrollbar-none">
           {children}
         </main>
       </div>
@@ -29,8 +29,5 @@ const Layout = ({ children }: LayoutProps) => {
     </div>
   );
 };
-
-
-
 
 export default Layout;
